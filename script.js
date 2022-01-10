@@ -46,23 +46,29 @@ function division(x, y) {
   console.log(x / y);
 }
 division(4, 2);
+
 ///// very hard
 /// get person to insert a number
-let firstNum = prompt(" insert a number please");
+let firstNum = parseInt(prompt(" insert a number please"));
+console.log(firstNum, typeof firstNum);
 /// options to choose examples
-let operator = prompt(" choose operation , (+ , -, *, /) ");
+let operator = prompt(" choose operation (+ , -, *, /) ");
 
 //// choose second
-let secondNum = prompt("insert second number");
-let result;
+let secondNum = parseInt(prompt("insert second number"));
+//let result;
 if (operator === `+`) {
-  result = firstNum + secondNum;
+  addition(firstNum, secondNum);
+  //result = firstNum + secondNum;
 } else if (operator === `-`) {
-  result = firstNum - secondNum;
+  subtract(firstNum, secondNum);
+  //result = firstNum - secondNum;
 } else if (operator === `*`) {
-  result = firstNum * secondNum;
+  multiplication(firstNum, secondNum);
+  //result = firstNum * secondNum;
 } else {
-  result = firstNum / secondNum;
+  division(firstNum, secondNum);
+  //result = firstNum / secondNum;
 }
 ///result
 
